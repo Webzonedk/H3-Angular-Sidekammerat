@@ -12,4 +12,6 @@ export class ParallelogramComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  //Ran out of time. I'll try to get further in the morning. (21:57)
 }
