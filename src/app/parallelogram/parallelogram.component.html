@@ -1,7 +1,7 @@
 <div class="card" style="width: 90%;">
     <div class="card-header d-flex justify-content-center">
 
-        <img src="assets\testSquare.png" class="card-img-top" alt="Rectangle image" style="height: 150px">
+        <img src="assets\parralelogram.png" class="card-img-top" alt="Rectangle image" style="height: 150px">
     </div>
     <div class="card-body">
         <h5 class="card-title">Parralelogram</h5>
@@ -9,25 +9,39 @@
     </div>
     <div class="row card-body">
         <div class="col-md-6">
-            <p>Længde: </p>
+            <p>Grundlinje(g): </p>
         </div>
         <div class="col-md-6">
-            <input type="number" style="width: 75%">
+            <input type="number" id="lengthG" [(ngModel)]="lengthG" name="lengthG" style="width: 75%">
         </div>
         <div class="col-md-6">
-            <p>Højde: </p>
+            <p>Sidelængde(s): </p>
         </div>
         <div class="col-md-6">
-            <input type="number" style="width: 75%">
+            <input type="number" id="lengthS" [(ngModel)]="lengthS" name="lengthS" style="width: 75%">
         </div>
         <div class="col-md-6">
-            <!-- <p>Areal: {{areal}} cm</p> -->
+            <p>Højde(h): </p>
         </div>
         <div class="col-md-6">
-            <!-- <p>Omkreds: {{circumference}} cm</p> -->
+            <input type="number" id="height" [(ngModel)]="height" name="height" style="width: 75%">
         </div>
-        <div class="col-md-12 d-flex justify-content-center">
-            <button class="btn btn-primary">Beregn </button>
+        <div class="col-md-6">
+            <p>Areal: </p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-end">{{area}} cm.</p>
+        </div>
+        <div class="col-md-6">
+            <p>Omkreds: </p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-end">{{circum}} cm.</p>
+        </div>
+        <div class="row card-body">
+            <div class="col-md-12 d-flex justify-content-center">
+                <button class="btn btn-primary" type="submit" (click)="calculate(lengthG, lengthS, height)">Beregn </button>
+            </div>
         </div>
     </div>
 </div>

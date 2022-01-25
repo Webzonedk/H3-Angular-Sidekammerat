@@ -1,7 +1,6 @@
 <div class="card" style="width: 90%;">
     <div class="card-header d-flex justify-content-center">
-
-        <img src="assets\testSquare.png" class="card-img-top" alt="Rectangle image" style="height: 150px">
+        <img src="assets\square.png" class="card-img-top" alt="Square image" style="height: 150px; width: 150px;">
     </div>
     <div class="card-body">
         <h5 class="card-title">Kvadrat</h5>
@@ -9,7 +8,7 @@
     </div>
     <div class="row card-body">
         <div class="col-md-6">
-            <p>Længde: </p>
+            <p>Længde(l): </p>
         </div>
         <div class="col-md-6">
             <input type="number" id="length" [(ngModel)]="length" name="length" style="width: 75%">
@@ -32,6 +31,8 @@
         <div class="col-md-6">
             <p class="text-end">{{circum}} cm.</p>
         </div>
+    </div>
+    <div class="row card-body">
         <div class="col-md-12 d-flex justify-content-center">
             <button class="btn btn-primary" type="submit" (click)="calculate(length, height)">Beregn </button>
         </div>
