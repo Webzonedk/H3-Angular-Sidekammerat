@@ -11,7 +11,6 @@ export class SquareComponent extends Shapes implements OnInit {
   area: number = 0;
   circum: number = 0;
   length: number = 0;
-  height: number = 0;
   constructor() {
     super();
   }
@@ -19,18 +18,18 @@ export class SquareComponent extends Shapes implements OnInit {
   ngOnInit(): void {
   }
   //Calling the two methods
-  calculate(width: number, height: number) {
-    this.calculateArea(width, height);
-    this.calculateCircum(width, height);
+  calculate(length: number) {
+    this.calculateArea(length);
+    this.calculateCircum(length);
   }
   //Calculating the Area
-  calculateArea(width: number, height: number): number {
-    this.area = width * height;
+  calculateArea(length: number): number {
+    this.area = length * length;
     return this.area;
   }
   //Calculating Circum
-  calculateCircum(width: number, height: number): number {
-    this.circum = width * 2 + height * 2;
+  calculateCircum(length: number): number {
+    this.circum = length *4;
     return this.circum;
   }
 
